@@ -177,7 +177,7 @@ class Map(object):
     	  	  	   	ax.scatter(self.outputs[i][j].X,self.outputs[i][j].Y,color="Gray")
     	  	  	   	ax.annotate(5,(self.outputs[i][j].X,self.outputs[i][j].Y),color="Black")
     	  	  	   elif(labels[int(str(i)+str(j))]==6):
-    	  	  	   	ax.scatter(self.outputs[i][j].X,self.outputs[i][j].Y,color="Blue")
+    	  	  	   	ax.scatter(self.outputs[i][j].X,self.outputs[i][j].Y,color="Gold")
     	  	  	   	ax.annotate(6,(self.outputs[i][j].X,self.outputs[i][j].Y),color="Black")
     	  	  	   elif(labels[int(str(i)+str(j))]==7):
     	  	  	   	ax.scatter(self.outputs[i][j].X,self.outputs[i][j].Y,color="Yellow")
@@ -270,8 +270,8 @@ teste = np.loadtxt("teste.data",delimiter=",")
 
 
 #Para carregar uma rede
-Xte = test[:,:1024]
-yte = test[:,1024]
+Xte = teste[:,:1024]
+yte = teste[:,1024]
 map = Map(1024,10,None)
 map.init(h)  #Essa funcao carrega os pesos de uma rede treinada
 
@@ -283,8 +283,8 @@ plt.show() #plota no plano xy
 #Para treinar uma rede
 
 #ESTE ALGORITMO TEM UM TREINAMENTO LENTO COM ESTE CONJUNTO
-#Xtr = treino[:,:1024]
-#ytr = treino[:,1024]
+Xtr = treino[:,:1024]
+ytr = treino[:,1024]
 #map = Map(1024,10,None)
 #map.initialise()
 #map.loadD(Xtr)
